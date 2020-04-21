@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTA</title>
+    <link rel="stylesheet" href="./lib/reset/normalize.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./lib/tab插件/css/jquery.horizontalmenu.css">
+    <link rel="stylesheet" href="./fonts/font_dw1i14leiz/iconfont.css">
+    <script src="./lib/jquery-3.4.1.min.js"></script>
+    <script src="./lib/tab插件/js/jquery.horizontalmenu.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="title-nav">
+            <div class="title">
+                <div class="title-left">
+                    <div><a>登录</a>或<a>注册</a>ANTA会员</div>
+                </div>
+                <div class="title-right">
+
+                    <span class="iconfont" title="购物车">&#xe619;</span>
+                    <span class="iconfont2" title="在线客服">&#xe6d0;</span>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="nav-logo">
+                <img src="./images/logo-anta-r-02.svg" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li>男子<span></span></li>
+                    <li>女子<span></span></li>
+                    <li>儿童<span></span></li>
+                    <li>安踏儿童<span></span></li>
+                    <li>品牌文化<span></span></li>
+                    <li>观赏视频<span></span></li>
+                    <li>联系我们<span></span></li>
+                    <li>
+                        <div class="nav-search">
+                            <a class="iconfont3">&#xe619;</a>
+                            <input type="text" placeholder="搜索">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-list-content">
+                <div class="container">
+                    <!-- div代表鼠标鼠标over的列表 -->
+                    <div class="over-part1">
+                        <!-- 每一个ul都要有一个右边框 -->
+                        <!-- 每个ul一个左浮动 -->
+                        <!--  -->
+                        <ul>
+                          <li>系列推荐</li>
+                          <li><img src="./images/nav-i-kt.png" alt=""></li>
+                          <li><img src="./images/nav-i-cola.png" alt=""></li>
+                          <li><img src="./images/nav-i-mv.png" alt=""></li>
+                          <li><img src="./images/nav-i-nasa.png" alt=""></li>
+                          <li><img src="./images/nav-i-lzh.png" alt=""></li>
+                          <li>故宫</li>
+                          <li>RICO</li>
+                          <li>老爹鞋</li>
+                          <li>小白鞋</li>  
+                        </ul>
+                        <ul>
+                            <li>所有鞋类</li>
+                            <li>运动鞋</li>
+                            <li>跑鞋</li>
+                            <li>篮球鞋</li>
+                            <li>休闲鞋</li>
+                            <li>板鞋</li>
+                            <li>帆布鞋</li>
+                            <li>拖鞋·凉鞋</li>
+                            <li>棉鞋</li>
+                            <li>户外综训鞋</li>
+                        </ul>
+                        <ul>
+                            <div>
+                                <ul>
+                                    <li>所有服装</li>
+                                    <li>套头卫衣</li>
+                                    <li>针织外套</li>
+                                    <li>梭织外套</li>
+                                    <li>针织长裤</li>
+                                    <li>梭织长裤</li>
+                                    <li>羽绒服/马甲</li>
+                                    <li>针织运动套装</li>
+                                    <li>长袖T恤</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li>短袖T恤</li>
+                                    <li>运动短裤</li>
+                                    <li>五分裤</li>
+                                    <li>七分裤</li>
+                                    <li>POLO杉</li>
+                                    <li>棉服</li>
+                                    <li>比赛服</li>
+                                    <li>运动背心</li>
+                                    <li>户外两件套</li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <ul>
+                            <li>所有配件</li>
+                            <li>包类</li>
+                            <li>运动内裤</li>
+                            <li>运动袜子</li>
+                            <li>帽子</li>
+                            <li>球类</li>
+                        </ul>
+                        <ul>
+                            <li>
+                              运动项目  
+                            </li>
+                            <li>跑步</li>
+                            <li>篮球</li>
+                            <li>足球</li>
+                            <li>综训</li>
+                            <li>户外</li>
+                            <li>生活</li>
+                            <li>健身</li>
+                        </ul>
+                        <ul>
+                            <li>热销精品</li>
+                            <li><img src="./images/nav-man-01.jpg" alt="">
+                            </li>
+                            <li>新品上市</li>
+                        </ul>
+                    </div>
+                    <!-- 第二个大板块 -->
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        // //获取nav-list，给里面的li添加鼠标移入事件
+        $('.nav-list li:nth-child(-n+7)').on('mouseenter',function() {
+            $(this).children().addClass('active')
+        })
+        $('.nav-list li:nth-child(-n+7)').on('mouseleave',function() {
+            $(this).children().removeClass('active')
+        })
+    </script>
+</body>
+
+</html>
