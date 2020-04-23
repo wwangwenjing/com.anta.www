@@ -192,22 +192,467 @@ nav .nav-list-content .over-part1 ul:nth-child(6)
     padding-left: 30px;
     box-sizing: border-box;
 }
-.over-part1 ul:nth-child(3) >div>ul{
+.over-part1 ul:nth-child(3) >.cha>ul{
     border-right: none;
 }
-.over-part1 ul:nth-child(3) >div:nth-child(1) ul {
+.over-part1 ul:nth-child(3) >.cha:nth-child(1) ul {
     margin-right: 25px;
 }
-.over-part1 ul:nth-child(3) >div:nth-child(2) ul {
+.over-part1 ul:nth-child(3) >.cha:nth-child(2) ul {
     margin-top: 25px;
 }
-.over-part1 ul:nth-child(3) >div:nth-child(2) ul>li {
+.over-part1 ul:nth-child(3) >.cha:nth-child(2) ul>li {
     font-weight: normal;
 }
 nav .nav-list-content .over-part1 ul:nth-child(6) {
     border-right: none;
 }
 /* 把第一个大板块隐藏了 */
-.over-part1 {
-    /* display: none; */
+.nav-list-content {
+    display: none;
 }
+
+/* 第二块 */
+nav .nav-list-content {
+    width: 100%;
+    height: 380px;
+    background-color: white;
+    position: absolute;
+    top: 101px;
+    left: 0px;
+}
+nav .nav-list-content .container {
+    padding-left: 160px;
+}
+ .nav-list-content .over-part2 ul {
+    float: left;
+    border-right: 1px solid #ccc;
+    height: 300px;
+}
+.nav-list-content .over-part2>ul:nth-child(1) {
+    position: relative;
+}
+.nav-list-content .over-part2>ul:nth-child(1) i {
+    position: absolute;
+    top: 25px;
+    left: 54px;
+    color: #aa1119;
+    font-size: 12px;
+}
+.nav-list-content .over-part2 ul:nth-child(5) {
+    height: 165px;
+
+}
+nav .nav-list-content .over-part2 ul:nth-child(1) {
+    width: 130px;
+}
+nav .nav-list-content .over-part2 ul:nth-child(2) {
+    width: 170px;
+}
+nav .nav-list-content .over-part2 ul:nth-child(3) {
+    width: 333px;
+}
+nav .nav-list-content .over-part2 ul:nth-child(4),
+nav .nav-list-content .over-part2 ul:nth-child(5)
+ {
+    width: 170px;
+}
+.nav-list-content .over-part2 li:nth-child(1) {
+    font-weight: bold;
+    font-size: 14px;
+}
+.nav-list-content .over-part2 ul li {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.over-part2 {
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+.nav-list-content .over-part2>ul:nth-child(1) li {
+    margin: 0px 0px;
+}
+.over-part2 ul:nth-child(1) li:nth-child(1),
+.over-part2 ul:nth-child(1) li:nth-child(7),
+.over-part2 ul:nth-child(1) li:nth-child(8),
+.over-part2 ul:nth-child(1) li:nth-child(9),
+.over-part2 ul:nth-child(1) li:nth-child(10) {
+    margin-bottom: 10px;
+}
+.over-part2 ul:nth-child(2) {
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.over-part2 ul:nth-child(3),
+.over-part2 ul:nth-child(4),
+.over-part2 ul:nth-child(5),
+.over-part2 ul:nth-child(6){
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.over-part2 ul:nth-child(3) >div>ul{
+    border-right: none;
+}
+.over-part2 ul:nth-child(3) >div:nth-child(1) ul {
+    margin-right: 25px;
+}
+.over-part2 ul:nth-child(3) >div:nth-child(2) ul {
+    margin-top: 25px;
+}
+.over-part2 ul:nth-child(3) >div:nth-child(2) ul>li {
+    font-weight: normal;
+}
+nav .nav-list-content .over-part2 ul:nth-child(5) {
+    border-right: none;
+}
+.nav-list-content .over-part2>ul:nth-child(1)>li:nth-child(1) {
+    margin-top: 10px;
+}
+/* 把第二个大板块隐藏了 */
+.nav-list-content {
+    display: none;
+}
+
+/* 第三块 */
+
+nav .nav-list-content {
+    width: 100%;
+    height: 380px;
+    position: absolute;
+    top: 101px;
+    left: 0px;
+}
+nav .nav-list-content .container {
+    padding-left: 160px;
+}
+ .nav-list-content .over-part3 ul {
+    float: left;
+    border-right: 1px solid #ccc;
+    height: 300px;
+}
+.nav-list-content .over-part3>ul:nth-child(1) {
+    position: relative;
+}
+.nav-list-content .over-part3>ul:nth-child(1) i {
+    position: absolute;
+    top: 25px;
+    left: 54px;
+    color: #aa1119;
+    font-size: 12px;
+}
+.nav-list-content .over-part3 ul:nth-child(5) {
+    height: 165px;
+
+}
+nav .nav-list-content .over-part3 ul:nth-child(1) {
+    width: 130px;
+}
+nav .nav-list-content .over-part3 ul:nth-child(2) {
+    width: 170px;
+}
+nav .nav-list-content .over-part3 ul:nth-child(3) {
+    width: 333px;
+}
+nav .nav-list-content .over-part3 ul:nth-child(4),
+nav .nav-list-content .over-part3 ul:nth-child(5)
+ {
+    width: 170px;
+}
+.nav-list-content .over-part3 li:nth-child(1) {
+    font-weight: bold;
+    font-size: 14px;
+}
+.nav-list-content .over-part3 ul li {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.over-part3 {
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+.nav-list-content .over-part3>ul:nth-child(1) li {
+    margin: 0px 0px;
+}
+ .over-part3 ul:nth-child(1) li:nth-child(1),
+.over-part3 ul:nth-child(1) li:nth-child(2),
+.over-part3 ul:nth-child(1) li:nth-child(3),
+.over-part3 ul:nth-child(1) li:nth-child(4),
+.over-part3 ul:nth-child(1) li:nth-child(5),
+.over-part3 ul:nth-child(1) li:nth-child(6) {
+    margin-bottom: 10px;
+} 
+.over-part3 ul:nth-child(2) {
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.over-part3 ul:nth-child(3),
+.over-part3 ul:nth-child(4),
+.over-part3 ul:nth-child(5),
+.over-part3 ul:nth-child(6){
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.over-part3 ul:nth-child(3) >div>ul{
+    border-right: none;
+}
+.over-part3 ul:nth-child(3) >div:nth-child(1) ul {
+    margin-right: 25px;
+}
+.over-part3 ul:nth-child(3) >div:nth-child(2) ul {
+    margin-top: 25px;
+}
+.over-part3 ul:nth-child(3) >div:nth-child(2) ul>li {
+    font-weight: normal;
+}
+nav .nav-list-content .over-part3 ul:nth-child(5) {
+    border-right: none;
+}
+.nav-list-content .over-part3>ul:nth-child(1)>li:nth-child(1) {
+    margin-top: 10px;
+}
+.nav-list-content .over-part3>ul:nth-last-child(1) {
+    position: relative;
+}
+.nav-list-content .over-part3>ul:nth-last-child(1) i {
+    color: #aa1119;
+    font-weight: normal;
+    position: absolute;
+    top: -2px;
+    left: 85px;
+}
+.nav-list-content .over-part3>ul:nth-last-child(1) li:nth-child(4) {
+    border-bottom: 1px solid #ccc;
+    width: 210px;
+  
+}
+/* 把第二个大板块隐藏了 */
+.nav-list-content {
+    display: none;
+}
+/* 轮播图 */
+.Rotation-chart {
+    width: 100%;
+    height: 650px;
+    /* background-color: blue; */
+}
+.Rotation-chart ul {
+    width: 1920px;
+    height: 600px;
+    overflow: hidden;
+}
+.Rotation-chart ul li {
+    float: left;
+}
+.Rotation-chart ol {
+    width: 63px;
+    height: 50px;
+    margin: 0 auto;
+}
+.Rotation-chart ol li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    margin-top: 20px;
+}
+.Rotation-chart ol li:nth-child(-n+2) {
+    margin-right: 10px;
+}
+.Rotation-chart li.active {
+    background-color: #ccc;
+}
+.Rotation-chart .arrow {
+    display: none;
+  }
+
+  .Rotation-chart .arrow-left,
+  .Rotation-chart .arrow-right {
+    font-family: "SimSun", "宋体";
+    width: 30px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  .Rotation-chart .arrow-left:hover,
+  .Rotation-chart .arrow-right:hover {
+    background-color: rgba(0, 0, 0, .5);
+  }
+
+  .Rotation-chart .arrow-left {
+    left: 0;
+  }
+
+  .Rotation-chart .arrow-right {
+    right: 0;
+  }
+/* 明星背景图 */
+
+main .star {
+    position: relative;
+    width: 100%;
+    height: 971px;
+    background-color: aqua;
+    background-image: url(../images/index-02-bg.jpg),
+                        url(../images/index-03-bg.jpg);
+    background-repeat: no-repeat no-repeat;
+    background-position: 0px 0px,0px 300px;
+
+
+}
+main .star .star-list {
+    width: 100%;
+    position: absolute;
+    top: 350px;
+    left: 8px;
+}
+main .star .star-list ul {
+    background-color: black;
+}
+.star .star-list li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+.star .star-list li img:nth-child(2) {
+    position: absolute;
+    /* 这个是根据父元素的高度 */
+    top: 100%;
+    left: 0px;
+    background-position: bottom;
+    opacity: 0;
+}
+/* 当季新品 */
+.new-product {
+    width: 100%;
+    height: 827px;
+    background-color: #0c1011;
+    /* background-image: url(../images/index-03.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: 0px 1000px; */
+}
+.new-product .show-product {
+    width: 1200px;
+}
+.new-product .show-product-top {
+    padding-top: 50px;
+    box-sizing: border-box;
+    margin-left: 358px;
+}
+.new-product .show-product-top img:nth-child(2) {
+    height: 43px;
+    width: auto;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+.new-product .show-product-bottom {
+    width: 1200px;
+    height: 706px;
+    background-color: white;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+.show-product-bottom>ul {
+    width: 1160px;
+    height: 706px;
+}
+.show-product-bottom>ul li {
+    float: left;
+}
+
+.show-product-bottom>ul li:nth-child(1) {
+    width: 290px;
+    height: 690px;
+    margin-top: 16px;
+}
+.show-product-bottom>ul li:nth-child(2),
+.show-product-bottom>ul li:nth-child(3),
+.show-product-bottom>ul li:nth-child(4) {
+    margin-top: 8px;
+}
+.show-product-bottom>ul li:nth-last-child(-n+6) {
+    width: 285px;
+    height: 345px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    top: 0;
+    background-color: blueviolet;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+.show-product-bottom>ul li:nth-last-child(-n+6) img {
+    width: 255px;
+    height: 255px;
+
+}
+ .show-product-bottom li:nth-child(2) .word {
+     display: block;
+    width: 100%;
+    height: 30px;
+    background-color: teal;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+ }
+.show-product-bottom li:nth-child(2) .price {
+    display: block;
+    width: 255px;
+    height: 25px;
+    background-color: thistle;
+}
+.show-product-bottom li:nth-child(2) .price span:nth-child(1) {
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+    line-height: 25px;
+}
+.show-product-bottom li:nth-child(2) .price span:nth-child(2) {
+    display: block;
+    font-size: 13px;
+    color: #ccc;
+    font-weight: 500;
+    line-height: 25px;
+    text-decoration: line-through;
+    margin-left: 5px;
+    display: none;
+}
+.show-product-bottom li:nth-child(2) .lunbo {
+    width: 100%;
+    height: 100px;
+    background-color: bisque;
+    padding: 10px 5px;
+    box-sizing: border-box;
+
+}
+/* .show-product-bottom .lunbo a:nth-child(1) {
+   float: left;
+} */
+/* .show-product-bottom .lunbo a:nth-child(2) {
+    float: right;
+ } */
+ /* .show-product-bottom li:nth-child(2) .lunbo ol {
+     padding: 0;
+     margin: 0;
+
+ } */
+/* .show-product-bottom .lunbo li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ccc;
+} */
+/* .show-product-bottom .lunbo .arrow-left {
+} */
