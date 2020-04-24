@@ -81,43 +81,125 @@ $(function () {
         $(".arrow-right").click();
     }, 2000)
 
-//滑动动画
-$('.star-list ul li').on('mouseenter', function () {
-    // $(this).css({
-    //     'opacity':0.8
-    // })
-    //获取整个li的高度
-    let liHeight = $(this).outerHeight()
-    // 获取斜图的高度 
-    let imgHeight = $(this).find('.star-img').outerHeight()
-    // 给斜图添加自定义动画        
-    $(this).find('.star-img').stop().animate({
-        //需要移动的高度为：li的高度-斜图的高度
-        top: liHeight - imgHeight,
-        //往上移动的时候，显示出来
-        opacity: 1
-    }, 500)
-    //其他图片往上移动的高度保持原样，并且透明
-    $(this).siblings().find('.star-img').stop().animate({
-        top: "100%",
-        opacity: 0
-    }, 500)
-})
-//当鼠标移出整个ul
-$('.star-list ul').on('mouseleave', function () {
-    //就让斜图和原来一样
-    $('.star-list ul li').find('.star-img').stop().animate({
-        top: "100%",
-        opacity: 0
-    }, 500)
-})
+    //滑动动画
+    $('.star-list ul li').on('mouseenter', function () {
+        //获取整个li的高度
+        let liHeight = $(this).outerHeight()
+        // 获取斜图的高度 
+        let imgHeight = $(this).find('.star-img').outerHeight()
+        // 给斜图添加自定义动画        
+        $(this).find('.star-img').stop().animate({
+            //需要移动的高度为：li的高度-斜图的高度
+            top: liHeight - imgHeight,
+            //往上移动的时候，显示出来
+            opacity: 1
+        }, 500)
+        //其他图片往上移动的高度保持原样，并且透明
+        $(this).siblings().find('.star-img').stop().animate({
+            top: "100%",
+            opacity: 0
+        }, 500)
+    })
+    //当鼠标移出整个ul
+    $('.star-list ul').on('mouseleave', function () {
+        //就让斜图和原来一样
+        $('.star-list ul li').find('.star-img').stop().animate({
+            top: "100%",
+            opacity: 0
+        }, 500)
+    })
 
 
 })
 
 
+$(function () {
+    //给每个li添加鼠标移入事件
+    $('.product-bottom-right>ul>li').on('mouseenter', function () {
+        //当鼠标移入进来，要让div撑大，撑大的同时，div里的轮播图要显示出来
+        //字体要变成两行，隐藏的价钱也要显示
+
+        $(this).children('.Location').stop().animate({
+            top: -30,
+            height: 415,
+            zIndex: 2
+        }, 100, function () {
+            $(this).find('.lunbo').show();
+            $(this).find('span').eq(1).show();
+            $(this).find('a').eq(1).css({
+                'white-space': 'normal',
+            })
+        })
+                //要获取小图的路径
+        // $('.Location .lunbo li').on('mouseenter',function() {
+        //     let imgsrc=$(this).children().attr('src');
+        //    console.log(imgsrc);
+           
+        //     $('.Location a:nth-child(1)').children('img').attr({
+        //                 'src': imgsrc
+        //             })
+        // })
+    })
+    $('.product-bottom-right>ul>li').on('mouseleave', function () {
+        $(this).children('.Location').stop().animate({
+            top: 0,
+            height: 345,
+            zIndex: 1
+        }, 100, function () {
+            $(this).find('.lunbo').css('display', 'none');
+            $(this).find('span').eq(1).hide();
+            $(this).find('a').eq(1).css({
+                'white-space': 'nowrap',
+            })
+        })
 
 
 
+    })
 
+    
+})
+// 中国boy
+$(function() {
+        //给每个li添加鼠标移入事件        
+        $('.red-boy .boy-list').on('mouseenter', function () {
+            //当鼠标移入进来，要让div撑大，撑大的同时，div里的轮播图要显示出来
+            //字体要变成两行，隐藏的价钱也要显示    
+            $(this).children('.order').stop().animate({
+                top: -30,
+                height: 415,
+                zIndex: 2
+            }, 100, function () {
+                $(this).find('.order-lunbo').show();
+                $(this).find('span').eq(1).show();
+                $(this).find('a').eq(1).css({
+                    'white-space': 'normal',
+                })
+            })
+        })
+        $('.red-boy>ul .boy-list').on('mouseleave', function () {
+           
+            $(this).children('.order').stop().animate({
+                top: 0,
+                height: 345,
+                zIndex: 1
+            }, 100, function () {
+                $(this).find('.order-lunbo').css('display', 'none');
+                $(this).find('span').eq(1).hide();
+                $(this).find('a').eq(1).css({
+                    'white-space': 'nowrap',
+                })
+            })
+        })  
+})
+//微信显示图
+$(function() {
+    $('.we-content-bottom .iconfont6').on('mouseenter',function() {
+        $('.we-content-bottom .small-box').show();
+    })
+    $('.we-content-bottom .iconfont6').on('mouseleave',function() {
+         $('.we-content-bottom .small-box').hide();
+     })
+ 
+})
 

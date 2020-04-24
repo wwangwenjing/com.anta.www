@@ -39,13 +39,13 @@ header .title-nav .title {
     margin: 0 5px;
 }
 .title-nav .title span {
-    font-size: 20px;
+    font-size: 23px;
 }
 .title-nav .title span:hover {
     color: black;
 }
-.title-nav .title-right .iconfont {
-    margin:0 30px;
+.title-nav .title-right .iconfont1 {
+    margin:0 27px;
 }
 nav {
     position: relative;
@@ -112,7 +112,7 @@ box-sizing: border-box;
     line-height: 26px;
     width: 158px;
     vertical-align: middle;
-    color: #000;
+    color: #cccccc;
     font-size: 15px;
     text-indent: 10px;
     outline: 0;
@@ -130,7 +130,6 @@ nav .active {
 nav .nav-list-content {
     width: 100%;
     height: 380px;
-    /* background-color: rosybrown; */
     position: absolute;
     top: 101px;
     left: 0px;
@@ -433,7 +432,6 @@ nav .nav-list-content .over-part3 ul:nth-child(5) {
 .Rotation-chart {
     width: 100%;
     height: 650px;
-    /* background-color: blue; */
 }
 .Rotation-chart ul {
     width: 1920px;
@@ -501,11 +499,10 @@ main .star {
     position: relative;
     width: 100%;
     height: 971px;
-    background-color: aqua;
     background-image: url(../images/index-02-bg.jpg),
                         url(../images/index-03-bg.jpg);
     background-repeat: no-repeat no-repeat;
-    background-position: 0px 0px,0px 300px;
+    background-position: 0px 1px,0px 301px;
 
 
 }
@@ -518,10 +515,14 @@ main .star .star-list {
 main .star .star-list ul {
     background-color: black;
 }
+main .star .star-list li:hover {
+    opacity: 0.7;
+}
 .star .star-list li {
     position: relative;
     float: left;
     overflow: hidden;
+    background-color: black;
 }
 .star .star-list li img:nth-child(2) {
     position: absolute;
@@ -534,11 +535,11 @@ main .star .star-list ul {
 /* 当季新品 */
 .new-product {
     width: 100%;
-    height: 827px;
     background-color: #0c1011;
-    /* background-image: url(../images/index-03.jpg); */
-    /* background-repeat: no-repeat; */
-    /* background-position: 0px 1000px; */
+    background-image: url(../images/index-03.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px 821px;
+    z-index: 1;
 }
 .new-product .show-product {
     width: 1200px;
@@ -557,102 +558,416 @@ main .star .star-list ul {
 .new-product .show-product-bottom {
     width: 1200px;
     height: 706px;
-    background-color: white;
-    padding: 0px 20px;
+    background-color:white;
+    padding: 10px 20px;
     box-sizing: border-box;
 }
-.show-product-bottom>ul {
-    width: 1160px;
-    height: 706px;
-}
-.show-product-bottom>ul li {
+.show-product-bottom .product-bottom-left {
     float: left;
-}
-
-.show-product-bottom>ul li:nth-child(1) {
     width: 290px;
     height: 690px;
-    margin-top: 16px;
+    margin-top: 6px;
 }
-.show-product-bottom>ul li:nth-child(2),
-.show-product-bottom>ul li:nth-child(3),
-.show-product-bottom>ul li:nth-child(4) {
-    margin-top: 8px;
+.show-product-bottom .product-bottom-right {
+    float: right;
+    width: 870px;
+    height: 696px;
 }
-.show-product-bottom>ul li:nth-last-child(-n+6) {
+.show-product-bottom .product-bottom-right li {
+    position: relative;
+    float: left;
     width: 285px;
     height: 345px;
-    margin-right: 5px;
-    margin-bottom: 8px;
-    top: 0;
-    background-color: blueviolet;
-    padding: 10px 15px;
-    box-sizing: border-box;
-}
-.show-product-bottom>ul li:nth-last-child(-n+6) img {
-    width: 255px;
-    height: 255px;
 
 }
- .show-product-bottom li:nth-child(2) .word {
-     display: block;
-    width: 100%;
-    height: 30px;
-    background-color: teal;
-    line-height: 25px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #000;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
- }
-.show-product-bottom li:nth-child(2) .price {
-    display: block;
+.show-product-bottom .product-bottom-right .Location {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0px 15px;
+    width: 285px;
+    height: 345px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+
+.show-product-bottom .product-bottom-right li:nth-child(1),
+.show-product-bottom .product-bottom-right li:nth-child(2),
+.show-product-bottom .product-bottom-right li:nth-child(4),
+.show-product-bottom .product-bottom-right li:nth-child(5) {
+    margin-right: 7px;
+}
+.show-product-bottom .product-bottom-right li:nth-child(-n+3) {
+    margin-bottom: 6px;
+}
+.product-bottom-right li img {
     width: 255px;
-    height: 25px;
-    background-color: thistle;
+    height: 255px;
+    margin-bottom: 10px;
 }
-.show-product-bottom li:nth-child(2) .price span:nth-child(1) {
-    font-size: 17px;
-    color: black;
-    font-weight: 500;
-    line-height: 25px;
-}
-.show-product-bottom li:nth-child(2) .price span:nth-child(2) {
+.product-bottom-right li a:nth-child(2) {
     display: block;
-    font-size: 13px;
-    color: #ccc;
-    font-weight: 500;
+   width: 100%;
+   height: 50px;
+   line-height: 25px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #000;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+ .product-bottom-right li p {
+    width: 100%;
+ }
+ .product-bottom-right .li .Location>a {
+    display: block;
+
+}
+
+ .product-bottom-right .Location p span:nth-child(1){
+    height: 25px;
     line-height: 25px;
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+ }
+ .product-bottom-right .Location p span:nth-child(2) {
+    color: #ccc;
     text-decoration: line-through;
     margin-left: 5px;
     display: none;
 }
-.show-product-bottom li:nth-child(2) .lunbo {
+
+ 
+ .product-bottom-right li .lunbo {
+     width: 100%;
+     height: 40px;
+     padding-top: 10px;
+     display: none;
+ }
+ .product-bottom-right li .lunbo>a:nth-child(1) {
+    float: left;
+}
+.product-bottom-right li .lunbo>a:nth-child(2) {
+   float: right;
+}
+ 
+.product-bottom-right li .lunbo li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    line-height: 27px;
+
+}
+.product-bottom-right .lunbo li>img {
     width: 100%;
-    height: 100px;
-    background-color: bisque;
-    padding: 10px 5px;
+    height: 100%;
+}
+.product-bottom-right .lunbo .iconfont4 {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 27px;
+}
+.product-bottom-right .lunbo .iconfont5 {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 27px;
+}
+/* 更多产品 */
+main .more-product {
+    width: 1200px;
+    height: 80px;
+    background-color: white;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+}
+main .more-product a:nth-child(1) {
+    float: left;
+    display: block;
+    width: 1010px;
+    height: 80px;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+main .more-product a:nth-child(2) {
+    float: right;
+    display: block;
+    box-sizing: border-box;
+    font-family: MFMingHei;
+    font-style: italic;
+    width: 125px;
+    height: 26px;
+    font-size: 25px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: #d00;
+    background-size: auto 100%;
+    background-position: center right;
+    font-weight: 600;
+    transform: scaleY(1.2);
+    margin-top: 25px;
+}
+/* 中国男孩 */
+main .china {
+    width: 100%;
+    height: 1190px;
+}
+.china .red-boy {
+    width: 1200px;
+    height: 1061px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10px 20px;
+    margin-top: 736px;
+    box-sizing: border-box;
+}
+.red-boy>ul>li {
+    float: left;
+    width: 285px;
+    height: 345px;
+    /* background-color: thistle; */
+}
+.red-boy .boy-list {
+    position: relative;
+}
+.red-boy .boy-list>div {
+    padding: 0 15px;
+}
+.red-boy>ul>li:nth-child(1) {
+    width: 570px;
+    height: 333px;
+    padding-top: 15px;
+    box-sizing: border-box;
+}
+.red-boy .boy-list:nth-last-child(-n+10) {
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+.red-boy .order {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 285px;
+    height: 345px;
+    padding: 0 15px;
     box-sizing: border-box;
 
 }
-/* .show-product-bottom .lunbo a:nth-child(1) {
-   float: left;
-} */
-/* .show-product-bottom .lunbo a:nth-child(2) {
-    float: right;
- } */
- /* .show-product-bottom li:nth-child(2) .lunbo ol {
-     padding: 0;
-     margin: 0;
 
- } */
-/* .show-product-bottom .lunbo li {
+.red-boy .boy-list img {
+    width: 255px;
+    height: 255px;
+    /* margin-bottom: 10px; */
+}
+.red-boy .boy-list a:nth-child(2) {
+    display: block;
+   width: 100%;
+   height: 50px;
+   line-height: 25px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #000;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   /* background-color: springgreen; */
+}
+.red-boy .boy-list p {
+    width: 100%;
+    /* background-color: slateblue; */
+ }
+.red-boy .boy-list  p span:nth-child(1){
+    height: 25px;
+    line-height: 25px;
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+ }
+ .red-boy .boy-list p span:nth-child(2) {
+    color: #ccc;
+    text-decoration: line-through;
+    margin-left: 5px;
+    display: none;
+}
+ .boy-list .order-lunbo>a:nth-child(1) {
     float: left;
-    width: 10px;
-    height: 10px;
+}
+.boy-list .order-lunbo>a:nth-child(2) {
+   float: right;
+}
+.boy-list .order-lunbo {
+    width: 100%;
+    height: 52px;
+    /* background-color: yellow; */
+    display: none;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+}
+.boy-list .order-lunbo li {
+    float: left;
+    width: 30px;
+    height: 30px;
     border: 1px solid #ccc;
-} */
-/* .show-product-bottom .lunbo .arrow-left {
-} */
+    margin: 0 5px;
+
+}
+.boy-list .order-lunbo li img {
+    width: 100%;
+    height: 100%;
+}
+.boy-list .order-lunbo .iconfont4 {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 30px;
+}
+.boy-list .order-lunbo .iconfont5 {
+    font-size: 16px;
+    color: #ccc;
+    line-height: 30px;
+
+}
+
+/* 精选系列 */
+main .choose {
+    width: 100%;
+    height: 561px;
+    background-image: url(../images/index-04.jpg);
+    background-repeat: no-repeat;
+}
+
+/* 关注我们 */
+main .we {
+    background-color: red;
+    width: 100%;
+    height: 271px;
+    margin-top: 0px;
+}
+main .we .we-content {
+    position: relative;
+    width: 100%;
+    height: 271px;
+    padding-top: 45px;
+    box-sizing: border-box;
+}
+.we-content i:nth-child(1) {
+    display: block;
+    font-size: 38px;
+    font-weight: bold;
+    color: white;
+    margin-left: 538px;
+}
+.we-content i:nth-child(2) {
+    display: block;
+    font-size: 20px;
+    color: white;
+    font-style: italic;
+    margin: 0 auto;
+    margin-left: 429px;
+    margin-top: 10px;
+}
+.we .we-content-bottom {
+    width: 200px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.we .we-content-bottom .iconfont6 {
+    float: left;
+    font-size: 55px;
+    color: white;
+}
+.we .we-content-bottom .iconfont7 {
+    float: right;
+    font-size: 55px;
+    color: white;
+}
+.we .we-content-bottom .small-box img {
+    width: 180px;
+    height: 180px;
+}
+.we-content-bottom .small-box {
+    position: absolute;
+    top: -45px;
+    left: 436px;
+    width: 180px;
+    height: 190px;
+    /* background-color: wheat; */
+    display: none;
+}
+.we-content-bottom .small-box img {
+    position: relative;
+}
+.we .we-content-bottom .small-box .iconfont8 {
+    position: absolute;
+    top: 172px;
+    left: 79px;
+    font-size: 25px;
+    color: white;
+}
+footer {
+    width: 100%;
+    height: 230px;
+    background-color: black;
+}
+footer .footer-logo {
+    float: left;
+    width: 250px;
+    height: 95px;
+    margin-top: 67px;
+    margin-right: 140px;
+}
+footer .footer-advertiser {
+    float: right;
+    width: 810px;
+    height: 230px;
+    padding-top: 45px;
+    box-sizing: border-box;
+}
+.footer-advertiser .part1 {
+    width: 100%;
+    height: 14px;
+    margin-bottom: 18px;
+}
+.footer-advertiser .part1 li {
+    float: left;
+    font-size: 14px;
+    color: white;
+}
+.footer-advertiser .part1 li:nth-child(1) i {
+    margin: 0 15px;
+}
+.footer-advertiser .part2 {
+    width: 100%;
+    height: 44px;
+}
+.footer-advertiser .part2 li {
+    float: left;
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+    line-height: 22px;
+}
+.footer-advertiser .part3 {
+    width: 100%;
+    height: 14px;
+    margin-top: 40px;
+}
+.footer-advertiser .part3 li {
+    float: left;
+    font-size: 14px;
+    color: white;
+    line-height: 14px;
+
+}
+.footer-advertiser .part3 li:nth-child(-n+5) i {
+    margin: 0 15px;
+    height: 14px;
+}
