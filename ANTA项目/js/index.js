@@ -192,6 +192,15 @@ $(function() {
             })
         })  
 })
+// 精选系列
+$(function() {
+//给每个a添加鼠标移入事件
+$('.choose-list a').on('mouseenter',function() {
+//当鼠标移入当前a，就让当前a高亮，其他a为原本色
+$(this).css('backgroundColor','transparent').siblings().css('backgroundColor','')
+})
+
+})
 //微信显示图
 $(function() {
     $('.we-content-bottom .iconfont6').on('mouseenter',function() {
@@ -202,4 +211,11 @@ $(function() {
      })
  
 })
-
+//侧边栏
+$(function() {
+    $('.slideBar a:nth-child(1)').on('click',function() {
+        $(document.documentElement).animate({
+            scrollTop:'0px'
+        })
+    })
+})
