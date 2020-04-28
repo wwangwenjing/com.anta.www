@@ -106,10 +106,10 @@ $(function () {
     //给part-two确认按钮添加鼠标点击事件
     $('.part-two .confirm').on('click', function () {
         //当点之后，要获取part-one里面输入框的值
-        let $phoneValue = $('.part-two>.Switch-content>input:eq(0)').val();     
+        let $phoneValue = $('.part-two>.Switch-content>input:eq(0)').val();
         let $loginValue = $('.part-two>.Switch-content>input:eq(1)').val();
-        let $pictureValue=$('.part-two .picture>input').val();
-        
+        let $pictureValue = $('.part-two .picture>input').val();
+
         //并判断输入框的值是否都为空
         if ($phoneValue.trim().length == 0 && $loginValue.trim().length == 0) {
             //如果为空 就给input添加红色边框，并让输入框下方的提示内容显示
@@ -120,35 +120,35 @@ $(function () {
 
         function checkEmail(strEmail) {
             var emailReg = /^\w+@[a-z0-9]+(\.[a-z]+){1,3}$/;
-            if(emailReg.test(strEmail)) {
+            if (emailReg.test(strEmail)) {
                 // alert('正确');
                 return true;
-    
-            }else {
+
+            } else {
                 // alert('错误');
                 return false;
             }
         }
-        var emailaddress='3206796951@qq.com';
+        var emailaddress = '3206796951@qq.com';
         console.log(checkEmail(emailaddress));
         if (checkEmail($phoneValue)) {
             $('.part-two .picture input:eq(0)').css('borderColor', 'red')
             $('.part-two .home-logo-middle').show();
             $('.part-two .home-logo-middle span').html('请输入图片验证码')
 
-        }else {
+        } else {
             $('.part-two .Switch-content input:eq(0)').css('borderColor', 'red')
             $('.part-two .home-logo-middle').show();
             $('.part-two .home-logo-middle span').html('请正确输入注册邮箱地址')
             $('.part-two .picture>input').css('borderColor', '')
         }
-        if (checkEmail($phoneValue)&&$pictureValue.trim().length < 4) {
+        if (checkEmail($phoneValue) && $pictureValue.trim().length < 4) {
             //如果为空 就给input添加红色边框，并让输入框下方的提示内容显示
             $('.part-two .home-logo-middle').show();
             $('.part-two .home-logo-middle span').html('验证码不正确')
             $('.part-two .picture>input').css('borderColor', 'red')
         }
-        if (checkEmail($phoneValue)&&$pictureValue.trim().length == 4) {
+        if (checkEmail($phoneValue) && $pictureValue.trim().length == 4) {
             //如果为空 就给input添加红色边框，并让输入框下方的提示内容显示
             $('.part-two .home-logo-middle').show();
             $('.part-two .home-logo-middle span').html('请先阅读并接受隐私政策')
@@ -161,6 +161,22 @@ $(function () {
     $('.part-two input').on('focus', function () {
         $('.part-two>.Switch-content input:eq(0)').css('borderColor', '')
         $('.part-two .home-logo-middle').hide();
+
+    })
+    //给隐私政策添加鼠标点击事件
+    $('.part-one .checkbox i').on('click', function () {
+        $('.mask').show();
+        $('.policy-content-body').show();
+    })
+    $('.part-two .checkbox i').on('click', function () {
+        $('.mask').show();
+        $('.policy-content-body').show();
+    })
+
+    //给同意和关闭按钮添加点击事件
+    $('.policy-content-bottom button').on('click', function () {
+        $('.mask').hide();
+        $('.policy-content-body').hide();
 
     })
 
