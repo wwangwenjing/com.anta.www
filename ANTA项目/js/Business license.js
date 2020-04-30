@@ -34,17 +34,6 @@ let index=$(this).index();
 //应该获取li的索引，把索引给右侧对应的内容，并让对应的内容显示，其他的兄弟隐藏
 $('.link-right').eq(index).show().siblings().hide();
 
-// if(index==0) {
-//     $('.link-right').eq(index).show().nextAll().hide();
-// }
-// if(index==1) {
-//     $('.link-right-next').eq(index).show().next().hide();
-
-// }
-// if(index==2) {
-//     $('.link-right-nexts').eq(index).show().prevAll().hide();
- 
-// }
 })
 })
 
