@@ -21,14 +21,37 @@ $(function () {
     })
 
 })
-$(function() {
-    //给country-list里面的每个li添加鼠标移入事件
-    $('.country-list li img').on('mouseenter',function() {
-        //当鼠标移入就让当前图片的背景色为黄色，其他的反之
-        $(this).css({
-            'backgroundColor':'#d5b560',
-            'opacity':'0.1'
-        })
+//热搜榜
+// $(function () {
+//     $('.hot-search ul').on('click', function () {
+//         let index = $(this).index();
+//         console.log(index);
+//         $(this).css('display', 'none').siblings().css('display', 'block')
+
+//     });
+//     timer = setInterval(function () {
+//         $('.hot-search ul').click();
+//     },1000)
+
+// })
+
+// 信息列表
+// $(function() {
+//     //给country-list里面的每个li添加鼠标移入事件
+//     $('.country-list li img').on('mouseenter',function() {
+//         //当鼠标移入就让当前图片的背景色为黄色，其他的反之
+//         $(this).css({
+//             'backgroundColor':'#d5b560',
+//             'opacity':'0.1'
+//         })
+
+//     })
+// })
+
+$(function () {
+    $('.end-left li img').on('mouseenter', function () {
+        console.log(111);
         
+        $('.end-left div img').show().siblings().hide()
     })
 })

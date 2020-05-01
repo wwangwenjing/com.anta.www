@@ -101,8 +101,6 @@ main .country {
 }
 main .country-contents {
     width: 100%;
-    /* height: 500px; */
-    /* background-color: sandybrown; */
     margin-top: 80px;
 }
 .country-contents .country-information {
@@ -182,7 +180,6 @@ main .country-contents {
     width: 57.5%;
     height: 20px;
     margin-top: 12px;
-    /* background-color: darkkhaki; */
     line-height: 20px;
     margin-left: 250px;
 }
@@ -195,7 +192,6 @@ main .country-contents {
     float: left;
     width: 499px;
     height: 20px;
-    /* background-color: darkolivegreen; */
     margin-right: 58px;
     margin-left: 5px;
     overflow: hidden;
@@ -218,10 +214,13 @@ main .country-contents {
     line-height: 20px;
     margin-right: 14px;
 }
+.hot-search ul li:hover {
+    color:blue;
+    font-weight: bold;
+}
 .country-list {
     width: 700px;
     height: 117px;
-    /* background-color: skyblue; */
     margin-left: 258px;
     margin-top: 95px;
 }
@@ -231,6 +230,20 @@ main .country-contents {
 .country-list li {
     float: left;
     text-align: center;
+}
+.country-list li span {
+    display: block;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+}
+.country-list li img {
+    border-radius: 50%;
+
+}
+.country-list li img:hover {
+    background-color: darkkhaki;
+    opacity: 0.2
 }
 .country-list li:nth-child(-n+3) {
     margin-right: 106px;
@@ -244,14 +257,13 @@ main .country-contents {
 footer {
     width: 100%;
     height: 112px;
-    background-color: blanchedalmond;
-    margin-top: 400px;
+    margin-top: 350px;
     border-top: 1px solid #cccccc;
 }
 footer .end-left {
+    float: left;
     width: 300px;
     height: 112px;
-    background-color: chartreuse;
     margin-left: 80px;
 }
 footer .end-left li {
@@ -270,7 +282,6 @@ footer .end-left li {
     position: relative;
     display: block;
     color: #ccc;
-    /* margin-top: 5px; */
     line-height: 20px;
 }
 footer .end-left .hide-one {
@@ -278,4 +289,43 @@ footer .end-left .hide-one {
     top: 578px;
     left: 100px;
     display: none;
+}
+footer .end-left .hide-two {
+    position: absolute;
+    top: 548px;
+    left: 170px;
+    display: none;
+}
+footer .end-left .hide-three {
+    position: absolute;
+    top: 548px;
+    left: 250px;
+    display: none;
+}
+footer .end-left .hide-four {
+    position: absolute;
+    top: 438px;
+    left: 330px;
+    display: none;
+}
+.end-right-contents {
+    float: right;
+    width: 74%;
+    height: 112px;
+    margin-right: 173px;
+    text-align: center;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+.end-right-contents p {
+    line-height: 20px;
+    color: #8d8d8d;
+
+}
+.end-right-contents p:nth-child(2) a {
+    display: inline-block;
+    color: #8d8d8d;
+}
+.end-right-contents p:nth-child(3)  {
+    color: blue;
 }
