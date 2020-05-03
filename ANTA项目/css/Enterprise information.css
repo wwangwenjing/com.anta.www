@@ -207,6 +207,10 @@ main .country-contents {
 .hot-search ul {
     float: left;
     overflow: hidden;
+    display: none;
+}
+.hot-search ul:nth-child(1) {
+    display: block;
 }
 .hot-search ul li {
     float: left;

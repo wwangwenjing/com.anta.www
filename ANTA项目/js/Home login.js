@@ -69,22 +69,13 @@ $(function () {
 
     let index = 0;
     //给验证码添加点击事件
-    $('.login-switch li img').on('click', function () {
-        index++;
-        let Oindex = $(this).index();
-        // console.log(index);
-        // if (index == $(".Rotation-chart ul li").length) {
-        //     index = 0
-        // }
-
-        if (index >= $(this).length) {
-            index = 0;
-
+    $('.login-switch li').on('click', function () {
+        let $index = $(this).index()
+        if ($index == $(this).parent().children().length - 1) {
+            $index = -1
         }
-        // console.log(Oindex);
-        // $(this).stop().fadeOut(1).siblings().stop().fadeIn(1)
-        $(this).stop().fadeIn(1)
-        $(this).eq(Oindex).stop().fadeOut(1)
+        $(this).hide()
+        $('.login-switch li').eq($index + 1).show()
 
 
     })
@@ -92,10 +83,10 @@ $(function () {
 
 
 //侧边栏
-$(function() {
-    $('.slideBar a:nth-child(1)').on('click',function() {
+$(function () {
+    $('.slideBar a:nth-child(1)').on('click', function () {
         $(document.documentElement).animate({
-            scrollTop:'0px'
+            scrollTop: '0px'
         })
     })
 })

@@ -93,7 +93,7 @@ $(function () {
             top: liHeight - imgHeight,
             //往上移动的时候，显示出来
             opacity: 1
-        }, 500)
+        }, 800)
         //其他图片往上移动的高度保持原样，并且透明
         $(this).siblings().find('.star-img').stop().animate({
             top: "100%",
@@ -115,7 +115,7 @@ $(function () {
 
 $(function () {
     //给每个li添加鼠标移入事件
-    $('.product-bottom-right>ul>li').on('mouseenter', function () {
+    $('.product-bottom-right>ul>.Oli-content').on('mouseenter', function () {
         //当鼠标移入进来，要让div撑大，撑大的同时，div里的轮播图要显示出来
         //字体要变成两行，隐藏的价钱也要显示
 
@@ -123,6 +123,7 @@ $(function () {
             top: -30,
             height: 415,
             zIndex: 2
+
         }, 100, function () {
             $(this).find('.lunbo').show();
             $(this).find('span').eq(1).show();
@@ -130,17 +131,15 @@ $(function () {
                 'white-space': 'normal',
             })
         })
-                //要获取小图的路径
-        // $('.Location .lunbo li').on('mouseenter',function() {
-        //     let imgsrc=$(this).children().attr('src');
-        //    console.log(imgsrc);
-           
-        //     $('.Location a:nth-child(1)').children('img').attr({
-        //                 'src': imgsrc
-        //             })
-        // })
+        //要获取小图的路径
+        $('.Location .lunbo li').on('mouseenter', function () {
+            let imgsrc = $(this).children().attr('src');
+            $(this).parents(".lunbo").prev().prev().find("img").attr({
+                'src': imgsrc
+            })
+        })
     })
-    $('.product-bottom-right>ul>li').on('mouseleave', function () {
+    $('.product-bottom-right>ul>.Oli-content').on('mouseleave', function () {
         $(this).children('.Location').stop().animate({
             top: 0,
             height: 345,
@@ -157,65 +156,74 @@ $(function () {
 
     })
 
-    
+
 })
 // 中国boy
-$(function() {
-        //给每个li添加鼠标移入事件        
-        $('.red-boy .boy-list').on('mouseenter', function () {
-            //当鼠标移入进来，要让div撑大，撑大的同时，div里的轮播图要显示出来
-            //字体要变成两行，隐藏的价钱也要显示    
-            $(this).children('.order').stop().animate({
-                top: -30,
-                height: 415,
-                zIndex: 2
-            }, 100, function () {
-                $(this).find('.order-lunbo').show();
-                $(this).find('span').eq(1).show();
-                $(this).find('a').eq(1).css({
-                    'white-space': 'normal',
-                })
+$(function () {
+    //给每个li添加鼠标移入事件        
+    $('.red-boy .boy-list').on('mouseenter', function () {
+        //当鼠标移入进来，要让div撑大，撑大的同时，div里的轮播图要显示出来
+        //字体要变成两行，隐藏的价钱也要显示    
+        $(this).children('.order').stop().animate({
+            top: -30,
+            height: 415,
+            zIndex: 2
+        }, 100, function () {
+            $(this).find('.order-lunbo').show();
+            $(this).find('span').eq(1).show();
+            $(this).find('a').eq(1).css({
+                'white-space': 'normal',
             })
         })
-        $('.red-boy>ul .boy-list').on('mouseleave', function () {
-           
-            $(this).children('.order').stop().animate({
-                top: 0,
-                height: 345,
-                zIndex: 1
-            }, 100, function () {
-                $(this).find('.order-lunbo').css('display', 'none');
-                $(this).find('span').eq(1).hide();
-                $(this).find('a').eq(1).css({
-                    'white-space': 'nowrap',
-                })
-            })
-        })  
+    })
+    //要获取小图的路径
+    $('.order-lunbo li').on('mouseenter', function () {
+        let imgsrc = $(this).children().attr('src');
+        $(this).parents(".order-lunbo").prev().prev().find("img").attr({
+            'src': imgsrc
+        })
+    })
+// })
+
+$('.red-boy>ul .boy-list').on('mouseleave', function () {
+
+    $(this).children('.order').stop().animate({
+        top: 0,
+        height: 345,
+        zIndex: 1
+    }, 100, function () {
+        $(this).find('.order-lunbo').css('display', 'none');
+        $(this).find('span').eq(1).hide();
+        $(this).find('a').eq(1).css({
+            'white-space': 'nowrap',
+        })
+    })
+})
 })
 // 精选系列
-$(function() {
-//给每个a添加鼠标移入事件
-$('.choose-list a').on('mouseenter',function() {
-//当鼠标移入当前a，就让当前a高亮，其他a为原本色
-$(this).css('backgroundColor','transparent').siblings().css('backgroundColor','')
-})
+$(function () {
+    //给每个a添加鼠标移入事件
+    $('.choose-list a').on('mouseenter', function () {
+        //当鼠标移入当前a，就让当前a高亮，其他a为原本色
+        $(this).css('backgroundColor', 'transparent').siblings().css('backgroundColor', '')
+    })
 
 })
 //微信显示图
-$(function() {
-    $('.we-content-bottom .iconfont6').on('mouseenter',function() {
+$(function () {
+    $('.we-content-bottom .iconfont6').on('mouseenter', function () {
         $('.we-content-bottom .small-box').show();
     })
-    $('.we-content-bottom .iconfont6').on('mouseleave',function() {
-         $('.we-content-bottom .small-box').hide();
-     })
- 
+    $('.we-content-bottom .iconfont6').on('mouseleave', function () {
+        $('.we-content-bottom .small-box').hide();
+    })
+
 })
 //侧边栏
-$(function() {
-    $('.slideBar a:nth-child(1)').on('click',function() {
+$(function () {
+    $('.slideBar a:nth-child(1)').on('click', function () {
         $(document.documentElement).animate({
-            scrollTop:'0px'
+            scrollTop: '0px'
         })
     })
 })

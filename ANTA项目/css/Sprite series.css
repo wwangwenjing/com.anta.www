@@ -445,15 +445,15 @@ main .Sprite-left {
     float: left;
     width: 18.5%;
     height: 100%;
-    background-color: burlywood;
+    /* background-color: burlywood; */
     padding-left: 60px;
     box-sizing: border-box;
 }
 main .Sprite-right {
     float: right;
-    width: 81.5%;
-    height: 100%;
-    background-color: chartreuse;
+    width: 80.5%;
+    /* height: 100%; */
+    /* background-color: chartreuse; */
 }
 main .Sprite-left .Sprite-title {
     width: 100%;
@@ -461,7 +461,7 @@ main .Sprite-left .Sprite-title {
     /* background-color: cornflowerblue; */
     padding-top: 30px;
     box-sizing: border-box;
-    border-bottom: 1px solid #666666;
+    border-bottom: 1px solid #cccccc;
 }
 .Sprite-left .Sprite-title a {
     float: left;
@@ -473,22 +473,380 @@ main .Sprite-left .Sprite-title {
     float: right;
     font-size: 16px;
     color: #666666;
-    border: 1px solid #666666;
+    border: 1px solid #cccccc;
     padding: 7px 13px;
     border-radius: 3px;
 
 }
 .Sprite-left .Sprite-content {
     width: 100%;
-    background-color: gold;
+    /* background-color: gold; */
 }
-/* .Sprite-content div h3 {
+.Sprite-content div h3 {
     float: left;
     font-size: 16px;
+    font-weight: bold;
 }
-.Sprite-content div {
-    border-bottom: 1px solid #666666;
+.Sprite-content ul li {
+    border-bottom: 1px solid #cccccc;
 }
 .Sprite-content div i {
     float: right;
-} */
+    transform: rotate(0deg);
+    transition: all 0.2s;
+
+}
+.Sprite-content div i.active {
+    transform: rotate(180deg);
+
+}
+
+.Sprite-content .Sprite-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+.Sprite-content .Sprite-list i {
+    color: #aaaaaa;
+    font-size: 20px;
+}
+.Sprite-content .Sprite-option {
+    display: none;
+    padding-bottom: 30px;
+
+}
+  /* 让第一个的显示 */
+.Sprite-content li:nth-child(1) .Sprite-option {
+    display: block;
+}
+.Sprite-option p {
+    font-size: 14px;
+    line-height: 30px;
+}
+.Sprite-content li:nth-last-child(1) {
+    border-bottom: none;
+}
+.Sprite-content li:nth-child(4) .Sprite-option {
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 25px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+/* 尺码的滚动条样式 */
+.scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+.scroll::-webkit-scrollbar-corner {
+    background: #f6f6f6;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 2px;
+}
+.scroll::-webkit-scrollbar-track {
+    background: #f6f6f6;
+    border-radius: 2px;
+}
+
+.Sprite-right .Sprite-top {
+    position: relative;
+    width: 100%;
+    height: 145px;
+    /* background-color: aquamarine; */
+    overflow: hidden;
+    padding-top: 45px;
+    box-sizing: border-box;
+}
+.Sprite-top .new-product {
+    position: absolute;
+    top: 34px;
+    right: 147px;
+    width: 170px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: white;
+    display: none;
+}
+.Sprite-top .new-product li {
+    position: relative;
+    border-bottom: 1px solid #f5f5f5;
+    line-height: 25px;
+}
+.new-product li i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: #b8e986;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    display: none;
+}
+.new-product li:nth-child(1) i {
+    display: block;
+}
+
+.Sprite-top .new-product li:nth-last-child(1) {
+    border-bottom: none;
+}
+.number {
+    position: absolute;
+    top: 84px;
+    right: 195px;
+    width: 50px;
+    height: 52px;
+
+    border: 1px solid #ccc;
+    /* padding: 20px 20px; */
+    /* box-sizing: border-box; */
+    /* display: none; */
+}
+.number span {
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    /* background-color: #666666; */
+    margin-top: 12px;
+    line-height: 28px;
+    text-align: center;
+    /* display: none; */
+}
+.page-content {
+    position: absolute;
+    top: 81px;
+    right: 869px;    
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 5px;
+    line-height: 50px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    opacity: 0.7;
+    display: none;
+}
+.Sprite-right .Sprite-top h1 {
+    float: left;
+    font-size: 32px;
+    margin: 0px;
+} 
+.Sprite-top h1 i {
+    font-size: 24px;
+    color: #ccc;
+    font-weight: normal;
+    margin-left: 10px;
+}
+.Sprite-right .Sprite-top div {
+    float: right;
+}
+.Sprite-top div a {
+    font-size: 14px;
+    border: 1px solid #ccc;
+    padding: 10px 0px;
+    border-radius: 3px;
+    padding-left: 23px;
+    /* padding-right: 12px; */
+    /* margin-right: 10px; */
+    box-sizing: border-box;
+    margin-left: 48px;
+}
+.Sprite-top div a>i {
+    font-size: 16px;
+    margin-left: 30px;
+    padding-right: 10px;
+}
+.Sprite-top div p {
+    font-size: 15px;
+    margin-top: 30px;
+    /* color: #ccc; */
+}
+.Sprite-top div p span {
+    border: 1px solid #ccc;
+    padding: 8px 0px;
+    padding-left: 15px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.Sprite-top p span>i {
+    margin-left: 10px;
+    margin-right: 6px;
+}
+.Sprite-top p i:nth-child(2) {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.Sprite-top p i:nth-child(3) {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.Sprite-bottom .Oli {
+    position: relative;
+    float: left;
+    width: 250px;
+    height: 310px;
+    background-color: white;
+    margin-right: 5px;
+    margin-bottom: 6px;
+}
+.Sprite-bottom .Oli .Oli-content {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 310px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: white;
+}
+.Sprite-bottom .Oli .Oli-content:hover {
+    box-shadow:0px 0px 9px -2px grey;
+}
+ .Oli .Oli-content a {
+    display:block;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Oli .Oli-content p {
+    margin-top: 7px;
+}
+.Oli .Oli-content p>span {
+    display: inline-block;
+    line-height: 25px;
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+}
+.Oli-content p>span i {
+    font-size: 14px;
+    color: #ccc;
+    margin-left: 10px;
+    text-decoration: line-through;
+    display: none;
+}
+.Oli .lunbo {
+    width: 100%;
+    height: 40px;
+    display: none;
+}
+ .Oli .lunbo li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+.Oli .lunbo li img {
+    width: 30px;
+    height: 30px;
+
+} 
+.Oli .Oli-content a img {
+    width: 220px;
+    height: 220px;
+}
+footer {
+    width: 100%;
+    height: 266px;
+    background-color: #292929;
+    margin-top: 200px;
+}
+footer .footer-logo {
+    float: left;
+    width: 250px;
+    height: 95px;
+    margin-top: 67px;
+    margin-right: 140px;
+}
+footer .footer-advertiser {
+    float: right;
+    width: 810px;
+    height: 230px;
+    padding-top: 45px;
+    box-sizing: border-box;
+}
+.footer-advertiser .part1 {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 18px;
+    margin-bottom: 20px;
+    padding-left: 55px;
+    box-sizing: border-box;
+}
+.footer-advertiser .part1-left {
+    float: left;
+    width: 360px;
+    height: 100px;
+    border-right: 1px solid white;
+}
+.footer-advertiser .part1-left p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+}
+.footer-advertiser .part1-left p a {
+    display: inline-block;
+    font-size: 35px;
+    margin-left: 20px;
+    color: white;
+}
+.footer-advertiser .part1-left p i {
+    font-size: 30px;
+    margin-left: 20px;
+
+}
+.footer-advertiser .part1-right {
+    float: right;
+    width: 90px;
+    height: 90px;
+    margin-right: 214px;
+    margin-top: 5px;
+}
+.footer-advertiser .part1-right img {
+    width: 90px;
+    height: 90px;
+
+}
+.footer-advertiser .part2 {
+    width: 100%;
+    height: 44px;
+}
+.footer-advertiser .part2 li {
+    float: left;
+    font-size: 14px;
+    color: white;
+    margin-right: 10px;
+    line-height: 22px;
+}
+.slideBar {
+    background-image: url(../images/web-cover.svg);
+    position: fixed;
+    right: 50px;
+    bottom: 320px;
+    width: 60px;
+    height: 275px;   
+    border-radius: 30px;
+    z-index: 999;
+}
+.slideBar a {
+    display: block;
+    width: 60px;
+    height: 85px;  
+    
+}

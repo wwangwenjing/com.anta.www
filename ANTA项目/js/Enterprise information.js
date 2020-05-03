@@ -22,18 +22,42 @@ $(function () {
 
 })
 //热搜榜
-// $(function () {
-//     $('.hot-search ul').on('click', function () {
-//         let index = $(this).index();
-//         console.log(index);
-//         $(this).css('display', 'none').siblings().css('display', 'block')
 
-//     });
-//     timer = setInterval(function () {
-//         $('.hot-search ul').click();
-//     },1000)
+/**
+ * 
+ *  .... 功能
+ * 
+ */
 
-// })
+$(function () {
+    let searchIndex = 0;
+    let searchTimer = null;
+    // $('.hot-search ul').on('click', function () {
+    //     let index = $(this).index();
+    //     console.log(index);
+    //     $(this).css('display', 'none').siblings().css('display', 'block')
+
+    // });
+    // timer = setInterval(function () {
+    //     $('.hot-search ul').click();
+    // },1000)
+    searchStart()
+    $(".hot-search").hover(function () {
+        clearInterval(searchTimer)
+    }, searchStart)
+
+    function searchStart() {
+        searchTimer = setInterval(function () {
+            $(".hot-search ul").eq(searchIndex).hide()
+            // 下一个
+            searchIndex++;
+            if (searchIndex == $(".hot-search ul").length) {
+                searchIndex = 0
+            }
+            $(".hot-search ul").eq(searchIndex).show()
+        }, 1000)
+    }
+})
 
 // 信息列表
 // $(function() {
@@ -47,11 +71,11 @@ $(function () {
 
 //     })
 // })
+// 
+// $(function () {
+//     $('.end-left li img').on('mouseenter', function () {
+//         console.log(111);
 
-$(function () {
-    $('.end-left li img').on('mouseenter', function () {
-        console.log(111);
-        
-        $('.end-left div img').show().siblings().hide()
-    })
-})
+//         $('.end-left div img').show().siblings().hide()
+//     })
+// })
