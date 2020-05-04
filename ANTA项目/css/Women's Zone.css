@@ -14,7 +14,6 @@ header .title-nav {
 header .title-nav .title {
     position: relative;
     float: right;
-    width: 259px;
     margin-right: 70px;
 }
 .title-nav .title .title-left {
@@ -24,7 +23,10 @@ header .title-nav .title {
     float: right;
     line-height: 47px;
 }
-
+.title .title-right span:nth-child(3) {
+    font-size: 16px;
+    line-height: 47px;
+}
 .title-nav div {
     float: left;
     color: #999;
@@ -41,13 +43,19 @@ header .title-nav .title {
 .title-nav .title span {
     font-size: 23px;
 }
+.title-nav .title span:nth-child(2) {
+    margin-right: 30px;
+}
 .title-nav .title span:hover {
     color: black;
+}
+.title .title-right span:nth-child(3):hover {
+    text-decoration: underline;
+
 }
 .title-nav .title-right .iconfont1 {
     margin:0 27px;
 }
-/* 导航列表 */
 nav {
     position: relative;
     width: 100%; 
@@ -128,17 +136,13 @@ box-sizing: border-box;
 nav .active {
     background-color: red;
 }
-/* 隐藏的盒子 */
 nav .nav-list-content {
     width: 100%;
     height: 380px;
-    background-color: white;
     position: absolute;
     top: 101px;
     left: 0px;
-    z-index: 2;
 }
-
  .nav-list-content .over-part1 ul {
     float: left;
     border-right: 1px solid #ccc;
@@ -217,6 +221,14 @@ nav .nav-list-content .over-part1 ul:nth-child(6) {
 }
 
 /* 第二块 */
+nav .nav-list-content {
+    width: 100%;
+    height: 380px;
+    background-color: white;
+    position: absolute;
+    top: 101px;
+    left: 0px;
+}
 nav .nav-list-content .container {
     padding-left: 160px;
 }
@@ -311,6 +323,13 @@ nav .nav-list-content .over-part2 ul:nth-child(5) {
 
 /* 第三块 */
 
+nav .nav-list-content {
+    width: 100%;
+    height: 380px;
+    position: absolute;
+    top: 101px;
+    left: 0px;
+}
 nav .nav-list-content .container {
     padding-left: 160px;
 }
@@ -418,486 +437,281 @@ nav .nav-list-content .over-part3 ul:nth-child(5) {
 .nav-list-content {
     display: none;
 }
-/* 轮播图 */
-.Rotation-chart {
+main {
     width: 100%;
-    height: 650px;
 }
-.Rotation-chart ul {
-    width: 1920px;
-    height: 600px;
-    overflow: hidden;
-}
-.Rotation-chart ul li {
-    float: left;
-}
-.Rotation-chart ol {
-    width: 63px;
-    height: 50px;
-    margin: 0 auto;
-}
-.Rotation-chart ol li {
-    float: left;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    margin-top: 20px;
-}
-.Rotation-chart ol li:nth-child(-n+2) {
-    margin-right: 10px;
-}
-.Rotation-chart li.active {
-    background-color: #ccc;
-}
-.Rotation-chart .arrow {
-    display: none;
-  }
-
-  .Rotation-chart .arrow-left,
-  .Rotation-chart .arrow-right {
-    font-family: "SimSun", "宋体";
-    width: 30px;
-    height: 60px;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    margin-top: -30px;
-    cursor: pointer;
+main .woman-Zone {
+    width: 100%;
+    padding-top: 61px;
+    box-sizing: border-box;
+    /* background-color: thistle; */
     text-align: center;
-    line-height: 60px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 30px;
-  }
-
-  .Rotation-chart .arrow-left:hover,
-  .Rotation-chart .arrow-right:hover {
-    background-color: rgba(0, 0, 0, .5);
-  }
-
-  .Rotation-chart .arrow-left {
-    left: 0;
-  }
-
-  .Rotation-chart .arrow-right {
-    right: 0;
-  }
-/* 明星背景图 */
-
-main .star {
+    padding-bottom: 50px;
+}
+.woman-Zone .woman-Zone-list img {
+    width: 200px;
+    height: 60px;
+}
+.woman-Zone-list ul {
     position: relative;
-    width: 100%;
-    height: 971px;
-    background-image: url(../images/index-02-bg.jpg),
-                        url(../images/index-03-bg.jpg);
-    background-repeat: no-repeat no-repeat;
-    background-position: 0px 1px,0px 301px;
-
-
+    margin-left: 370px;
 }
-main .star .star-list {
-    width: 100%;
-    position: absolute;
-    top: 350px;
-    left: 8px;
-}
-main .star .star-list ul {
-    width: 100%;
-    height: 579px;
-    background-color: black;
-}
-main .star .star-list li:hover {
-    opacity: 0.7;
-}
-.star .star-list li {
-    position: relative;
+.woman-Zone-list li {
     float: left;
-    overflow: hidden;
-    background-color: black;
+    width: 120px;
+    line-height: 25px;
+    margin-top: 53px;
+    /* background-color: yellowgreen; */
 }
-.star .star-list li img:nth-child(2) {
+.woman-Zone-list li h4 {
+    font-size: 17px;
+    border-right: 2px solid #ccc;
+
+}
+.woman-Zone-list li p {
+    color: #dddde4;
+}
+.woman-Zone-list li i {
     position: absolute;
-    /* 这个是根据父元素的高度 */
-    top: 100%;
-    left: 0px;
-    background-position: bottom;
-    opacity: 0;
+    top: 38px;
+    right: 354px;    display: inline-block;
+    width: 40px;
+    height: 15px;
+    color: white;
+    border-radius: 12px;
+    background-color: red;
+    line-height: 18px;
 }
-/* 当季新品 */
-.new-product {
+.woman-Zone-list li:nth-last-child(1) h4 {
+    border-right: none;
+}
+main .green {
     width: 100%;
-    background-color: #0c1011;
-    background-image: url(../images/index-03.jpg);
+    height: 600px;
+    background-image: url(../images/woman-01.jpg);
     background-repeat: no-repeat;
-    background-position: 0px 821px;
-    z-index: 1;
 }
-.new-product .show-product {
-    width: 1200px;
+main .summer-girls {
+    width: 100%;
+    height: 865px;
+    background-image: url(../images/woman-02.jpg);
+    background-repeat: no-repeat;
 }
-.new-product .show-product-top {
+
+main .Energetic-girl {
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/woman-03.jpg);
+    background-repeat: no-repeat;
+ 
+}
+main .Season-selection {
+    width: 100%;
+}
+.Season-selection .Season-selection-title {
+    position: relative;
+    width: 100%;
+    height: 125px;
+    /* background-color: skyblue; */
+    text-align: center;
     padding-top: 50px;
     box-sizing: border-box;
-    margin-left: 358px;
 }
-.new-product .show-product-top img:nth-child(2) {
-    height: 43px;
-    width: auto;
-    margin-left: 25px;
-    margin-bottom: 10px;
-}
-.new-product .show-product-bottom {
-    width: 1200px;
-    height: 706px;
-    background-color:white;
-    padding: 10px 20px;
-    box-sizing: border-box;
-}
-.show-product-bottom .product-bottom-left {
-    float: left;
-    width: 290px;
-    height: 690px;
-    margin-top: 6px;
-}
-.show-product-bottom .product-bottom-right {
-    float: right;
-    width: 870px;
-    height: 696px;
-}
-.show-product-bottom .product-bottom-right .Oli-content {
-    position: relative;
-    float: left;
-    width: 285px;
-    height: 345px;
-
-}
-.show-product-bottom .product-bottom-right .Location {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0px 15px;
-    width: 285px;
-    height: 345px;
-    padding: 0 15px;
-    box-sizing: border-box;
-    background-color: #fff;
-
-}
-.show-product-bottom .product-bottom-right .Location:hover {
-    box-shadow:0px 0px 9px -2px grey;
-
-}
-
-.show-product-bottom .product-bottom-right .Oli-content:nth-child(1),
-.show-product-bottom .product-bottom-right .Oli-content:nth-child(2),
-.show-product-bottom .product-bottom-right .Oli-content:nth-child(4),
-.show-product-bottom .product-bottom-right .Oli-content:nth-child(5) {
-    margin-right: 7px;
-}
-.show-product-bottom .product-bottom-right .Oli-content:nth-child(-n+3) {
-    margin-bottom: 6px;
-}
-.product-bottom-right .Oli-content img {
-    width: 255px;
-    height: 255px;
-    margin-bottom: 10px;
-}
-.product-bottom-right .Oli-content a:nth-child(2) {
-    display: block;
-   width: 100%;
-   height: 50px;
-   line-height: 25px;
-   font-size: 14px;
-   font-weight: 500;
-   color: #000;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-}
- .product-bottom-right .Oli-content p {
-    width: 100%;
- }
- .product-bottom-right .Oli-content .Location>a {
-    display: block;
-
-}
-
- .product-bottom-right .Location p span:nth-child(1){
-    height: 25px;
-    line-height: 25px;
-    color: #000;
-    font-size: 17px;
-    font-weight: 500;
- }
- .product-bottom-right .Location p span:nth-child(2) {
-    color: #ccc;
-    text-decoration: line-through;
-    margin-left: 5px;
-    display: none;
-}
-
- 
- .product-bottom-right .Oli-content .lunbo {
-     width: 100%;
-     height: 40px;
-     padding-top: 10px;
-     display: none;
- }
- .lunbo>a {
-     display: none;
- }
- .lunbo ul {
-     width: 90%;
-     /* background-color: thistle; */
-     overflow: hidden;
- }
- .product-bottom-right .Oli-content .lunbo>a:nth-child(1) {
-    float: left;
-}
-.product-bottom-right .Oli-content .lunbo>a:nth-child(2) {
-   float: right;
-}
- 
-.product-bottom-right .Oli-content .lunbo li {
-    float: left;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ccc;
-    margin: 0 5px;
-    line-height: 27px;
-}
-.product-bottom-right .lunbo li>img {
-    width: 100%;
-    height: 100%;
-}
-.product-bottom-right .lunbo .iconfont4 {
-    font-size: 16px;
-    color: #ccc;
-    line-height: 27px;
-}
-.product-bottom-right .lunbo .iconfont5 {
-    font-size: 16px;
-    color: #ccc;
-    line-height: 27px;
-}
-/* 更多产品 */
-main .more-product {
-    width: 1200px;
-    height: 80px;
-    background-color: white;
-    padding: 0 20px;
-    box-sizing: border-box;
-    
-}
-main .more-product a:nth-child(1) {
-    float: left;
-    display: block;
-    width: 1010px;
-    height: 80px;
-    padding-top: 30px;
-    box-sizing: border-box;
-}
-main .more-product a:nth-child(2) {
-    float: right;
-    display: block;
-    box-sizing: border-box;
+.Season-selection .Season-selection-title i {
     font-family: MFMingHei;
+    display: inline-block;
     font-style: italic;
-    width: 125px;
-    height: 26px;
-    font-size: 25px;
-    line-height: 22px;
-    letter-spacing: 2px;
-    color: #d00;
-    background-size: auto 100%;
-    background-position: center right;
+    letter-spacing: 3px;
+    transform: scaleY(1.5);
+    font-size: 40px;
     font-weight: 600;
     transform: scaleY(1.2);
-    margin-top: 25px;
 }
-/* 中国男孩 */
-main .china {
+.Season-selection .Season-selection-title a {
+    position: absolute;
+    height: 34px;
+    border: 1px solid #000;
+    line-height: 32px;
+    font-size: 15px;
+    color: #000;
+    padding: 0 16px;
+    right: 0;
+    top: 55px;
+}
+.Season-selection .Season-selection-contents {
     width: 100%;
-    height: 1190px;
+    height: 415px;
+    background-color: #f6f6f6;
 }
-.china .red-boy {
-    width: 1200px;
-    height: 1061px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 10px 20px;
-    margin-top: 736px;
+.Season-selection .Season-selection-contents .Oli {
+    float: left;
+}
+.Season-selection-contents {
+    padding: 0px 15px;
+    padding-top: 20px;
     box-sizing: border-box;
 }
-
-.red-boy>ul>li {
+.Season-selection-contents .Oli {
+    position: relative;
     float: left;
     width: 285px;
     height: 345px;
-}
-.red-boy .boy-list {
-    position: relative;
-}
-.red-boy .boy-list>.order {
-    padding: 0 15px;
     background-color: white;
+    margin-bottom: 6px;
 }
-.red-boy>ul>li:nth-child(1) {
-    width: 570px;
-    height: 333px;
-    padding-top: 15px;
-    box-sizing: border-box;
+.Season-selection-contents .Oli:nth-child(-n+3) {
+    margin-right: 10px;
+
 }
-.red-boy .boy-list:nth-last-child(-n+10) {
-    margin-right: 5px;
-    margin-bottom: 8px;
-}
-.red-boy .order {
+.Season-selection-contents .Oli .Oli-content {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
+    width: 250px;
     width: 285px;
     height: 345px;
-    padding: 0 15px;
+    padding: 15px;
     box-sizing: border-box;
-
+    background-color: white;
 }
-.red-boy .order:hover {
+.Season-selection-contents .Oli .Oli-content:hover {
     box-shadow:0px 0px 9px -2px grey;
-
 }
-.red-boy .boy-list img {
-    width: 255px;
-    height: 255px;
-    /* margin-bottom: 10px; */
+ .Oli .Oli-content a {
+    display:block;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
-.red-boy .boy-list a:nth-child(2) {
-    display: block;
-   width: 100%;
-   height: 50px;
-   line-height: 25px;
-   font-size: 14px;
-   font-weight: 500;
-   color: #000;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   /* background-color: springgreen; */
+.Oli .Oli-content p {
+    margin-top: 7px;
 }
-.red-boy .boy-list p {
-    width: 100%;
-    /* background-color: slateblue; */
- }
-.red-boy .boy-list  p span:nth-child(1){
-    height: 25px;
+.Oli .Oli-content p>span {
+    display: inline-block;
     line-height: 25px;
     color: #000;
     font-size: 17px;
     font-weight: 500;
- }
- .red-boy .boy-list p span:nth-child(2) {
+}
+.Oli-content p>span i {
+    font-size: 14px;
     color: #ccc;
+    margin-left: 10px;
     text-decoration: line-through;
-    margin-left: 5px;
     display: none;
 }
- .boy-list .order-lunbo>a:nth-child(1) {
-    float: left;
-}
-.boy-list .order-lunbo>a {
-    display: none;
-}
-.boy-list .order-lunbo>a:nth-child(2) {
-   float: right;
-}
-.boy-list .order-lunbo {
+.Oli .lunbo {
     width: 100%;
-    height: 52px;
-    /* background-color: yellow; */
+    height: 40px;
     display: none;
-    padding-top: 10px;
-    box-sizing: border-box;
-
 }
-.boy-list .order-lunbo li {
+ .Oli .lunbo li {
     float: left;
     width: 30px;
     height: 30px;
-    border: 1px solid #ccc;
-    margin: 0 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+.Oli .lunbo li img {
+    width: 30px;
+    height: 30px;
 
+} 
+.Oli .Oli-content a img {
+    width: 255px;
+    height: 255px;
 }
-.boy-list .order-lunbo li img {
-    width: 100%;
-    height: 100%;
+/* 热销推荐 */
+.Best-Sellers {
+ width: 100%;
+ margin-top: 50px;
 }
-.boy-list .order-lunbo .iconfont4 {
-    font-size: 16px;
-    color: #ccc;
-    line-height: 30px;
-}
-.boy-list .order-lunbo .iconfont5 {
-    font-size: 16px;
-    color: #ccc;
-    line-height: 30px;
-
-}
-
-/* 精选系列 */
-main .choose {
+.Best-Sellers-title {
     position: relative;
     width: 100%;
-    height: 561px;
-    background-image: url(../images/index-04.jpg);
-    background-repeat: no-repeat;
-    background-position: -7px 0px;
+    height: 125px;
+    /* background-color: skyblue; */
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+
 }
-.choose .choose-list {
+.Best-Sellers-title i {
+    font-family: MFMingHei;
+    display: inline-block;
+    font-style: italic;
+    letter-spacing: 3px;
+    transform: scaleY(1.5);
+    font-size: 40px;
+    font-weight: 600;
+    transform: scaleY(1.2);
+
+}
+.Best-Sellers-title a {
     position: absolute;
-    top: 60px;
-    left: 0px;
-    width: 1200px;
-    height: 501px;
+    height: 34px;
+    border: 1px solid #000;
+    line-height: 32px;
+    font-size: 15px;
+    color: #000;
+    padding: 0 16px;
+    right: 0;
+    top: 55px;
+    
 }
-.choose .choose-list a {
-    display: block;
-    width: 301px;
-    height: 161.4px;
-    margin-bottom: 8px;
-    background-color: black;
-    opacity: 0.4;
+.Best-Sellers .Best-Sellers-contents {
+    width: 100%;
+    height: 770px;
+    background-color: #f6f6f6;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+.Best-Sellers-left {
+    float: left;
+}
+.Best-Sellers-right {
+    float: right;
+    width: 870px;
+    height: 100%;
+    /* background-color: slateblue; */
+}
+.Best-Sellers-right .Oli {
+    position: relative;
+    float: left;
+    width: 285px;
+    height: 345px;
+    background-color: white;
+    margin-bottom: 6px;
 
 }
-
-.choose .choose-list a:nth-child(4) {
+.Best-Sellers-right .Oli .Oli-content {
     position: absolute;
     top: 0px;
-    left: 311px;
-    width: 580px;
-    height: 501px;
+    left: 0px;
+    width: 250px;
+    width: 285px;
+    height: 345px;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: white;
 }
-.choose .choose-list a:nth-child(5) {
-    position: absolute;
-    top: 1px;
-    left: 900px;
-    width: 301px;
-    height: 160.4px;
+.Best-Sellers-right .Oli .Oli-content:hover {
+    box-shadow:0px 0px 9px -2px grey;
 }
-.choose .choose-list a:nth-child(6) {
-    position: absolute;
-    top: 169px;
-    left: 900px;
-    width: 301px;
-    height: 162.4px;
+.Best-Sellers-right .Oli:nth-child(-n+2) {
+    margin-right: 7.5px;
 }
-.choose .choose-list a:nth-child(7) {
-    position: absolute;
-    top: 339px;
-    left: 900px;
-    width: 301px;
-    height: 160.4px;
+.Best-Sellers-right .Oli:nth-child(-n+3) {
+    margin-bottom: 11px;
+}
+
+.Best-Sellers-right .Oli:nth-last-child(-n+2) {
+    margin-left: 7.5px;
 }
 
 
@@ -906,7 +720,7 @@ main .we {
     background-color: red;
     width: 100%;
     height: 271px;
-    margin-top: 0px;
+    margin-top: 50px;
 }
 main .we .we-content {
     position: relative;
@@ -972,8 +786,8 @@ main .we .we-content {
 }
 footer {
     width: 100%;
-    height: 230px;
-    background-color: black;
+    height: 266px;
+    background-color: #292929;
 }
 footer .footer-logo {
     float: left;
@@ -991,16 +805,45 @@ footer .footer-advertiser {
 }
 .footer-advertiser .part1 {
     width: 100%;
-    height: 14px;
+    height: 100px;
     margin-bottom: 18px;
+    margin-bottom: 20px;
+    padding-left: 55px;
+    box-sizing: border-box;
 }
-.footer-advertiser .part1 li {
+.footer-advertiser .part1-left {
     float: left;
-    font-size: 14px;
+    width: 360px;
+    height: 100px;
+    border-right: 1px solid white;
+}
+.footer-advertiser .part1-left p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
+}
+.footer-advertiser .part1-left p a {
+    display: inline-block;
+    font-size: 35px;
+    margin-left: 20px;
     color: white;
 }
-.footer-advertiser .part1 li:nth-child(1) i {
-    margin: 0 15px;
+.footer-advertiser .part1-left p i {
+    font-size: 30px;
+    margin-left: 20px;
+
+}
+.footer-advertiser .part1-right {
+    float: right;
+    width: 90px;
+    height: 90px;
+    margin-right: 214px;
+    margin-top: 5px;
+}
+.footer-advertiser .part1-right img {
+    width: 90px;
+    height: 90px;
+
 }
 .footer-advertiser .part2 {
     width: 100%;
@@ -1012,22 +855,6 @@ footer .footer-advertiser {
     color: white;
     margin-right: 10px;
     line-height: 22px;
-}
-.footer-advertiser .part3 {
-    width: 100%;
-    height: 14px;
-    margin-top: 40px;
-}
-.footer-advertiser .part3 li {
-    float: left;
-    font-size: 14px;
-    color: white;
-    line-height: 14px;
-
-}
-.footer-advertiser .part3 li:nth-child(-n+5) i {
-    margin: 0 15px;
-    height: 14px;
 }
 .slideBar {
     background-image: url(../images/web-cover.svg);
