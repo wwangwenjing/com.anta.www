@@ -55,23 +55,23 @@ $(function () {
                 searchIndex = 0
             }
             $(".hot-search ul").eq(searchIndex).show()
-        }, 1000)
+        }, 2000)
     }
 })
 
 // 信息列表
-// $(function() {
-//     //给country-list里面的每个li添加鼠标移入事件
-//     $('.country-list li img').on('mouseenter',function() {
-//         //当鼠标移入就让当前图片的背景色为黄色，其他的反之
-//         $(this).css({
-//             'backgroundColor':'#d5b560',
-//             'opacity':'0.1'
-//         })
+$(function() {
+    //给country-list里面的每个li添加鼠标移入事件
+    $('.country-list li').on('mouseenter',function() {
+        //当鼠标移入就让当前图片的背景色为黄色，其他的反之
+        $(this).find('img:eq(0)').hide().siblings().show();
+    })
+    $('.country-list li').on('mouseleave',function() {
+        $(this).find('img:eq(0)').show().siblings().hide();
+    })
 
-//     })
-// })
-// 
+})
+
 // $(function () {
 //     $('.end-left li img').on('mouseenter', function () {
 //         console.log(111);

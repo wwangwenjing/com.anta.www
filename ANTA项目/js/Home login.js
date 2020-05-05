@@ -80,7 +80,17 @@ $(function () {
 
     })
 })
+$(function() {
+    $('.home-logo-bottom li').on('mouseenter',function() {
+        //当鼠标移入，第一张图片隐藏，第二张图片显示
+        $(this).children('img:eq(0)').hide().siblings().show();
+    })
+    $('.home-logo-bottom li').on('mouseleave',function() {
+        //鼠标离开，第一张图片显示，第二张图片隐藏
+        $(this).children('img:eq(0)').show().siblings().hide();
+    })
 
+})
 
 //侧边栏
 $(function () {

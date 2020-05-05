@@ -102,6 +102,20 @@ $(function () {
         $('.part-one .home-logo-middle').hide();
 
     })
+
+    let index = 0;
+    //给验证码添加点击事件
+    $('.picture li').on('click', function () {
+        let $index = $(this).index()
+        if ($index == $(this).parent().children().length - 1) {
+            $index = -1
+        }
+        $(this).hide()
+        $('.picture li').eq($index + 1).show()
+
+
+    })
+
     // 
     //给part-two确认按钮添加鼠标点击事件
     $('.part-two .confirm').on('click', function () {
@@ -163,6 +177,19 @@ $(function () {
         $('.part-two .home-logo-middle').hide();
 
     })
+    // let index = 0;
+    //给验证码添加点击事件
+    $('.part-two .picture li').on('click', function () {
+        let $index = $(this).index()
+        if ($index == $(this).parent().children().length - 1) {
+            $index = -1
+        }
+        $(this).hide()
+        $('.part-two .picture li').eq($index + 1).show()
+
+
+    })
+
     //给隐私政策添加鼠标点击事件
     $('.part-one .checkbox i').on('click', function () {
         $('.mask').show();

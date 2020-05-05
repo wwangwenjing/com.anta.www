@@ -245,9 +245,8 @@ main .country-contents {
     border-radius: 50%;
 
 }
-.country-list li img:hover {
-    background-color: darkkhaki;
-    opacity: 0.2
+.country-list li img:nth-child(2) {
+    display: none;
 }
 .country-list li:nth-child(-n+3) {
     margin-right: 106px;
